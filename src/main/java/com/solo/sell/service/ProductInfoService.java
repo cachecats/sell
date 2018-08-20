@@ -8,6 +8,11 @@ import java.util.List;
 
 public interface ProductInfoService {
 
+    /**
+     * 通过id查询单个商品
+     * @param id
+     * @return
+     */
     ProductInfo findById(String id);
 
     /**
@@ -23,6 +28,11 @@ public interface ProductInfoService {
      */
     Page<ProductInfo> findAll(Pageable pageable);
 
+    /**
+     * 保存一个商品
+     * @param productInfo
+     * @return
+     */
     ProductInfo save(ProductInfo productInfo);
 
     //加库存
