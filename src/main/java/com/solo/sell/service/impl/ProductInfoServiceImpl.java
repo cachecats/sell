@@ -1,6 +1,6 @@
 package com.solo.sell.service.impl;
 
-import com.solo.sell.dto.ProductInfo;
+import com.solo.sell.dataobject.ProductInfo;
 import com.solo.sell.enums.ProductStatusEnum;
 import com.solo.sell.repository.ProductInfoRepository;
 import com.solo.sell.service.ProductInfoService;

@@ -1,6 +1,6 @@
 package com.solo.sell.service;
 
-import com.solo.sell.dto.ProductCategory;
+import com.solo.sell.dataobject.ProductCategory;
 
 import java.util.List;
 

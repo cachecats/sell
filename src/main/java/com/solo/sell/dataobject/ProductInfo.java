@@ -1,4 +1,4 @@
-package com.solo.sell.dto;
+package com.solo.sell.dataobject;
 
 import lombok.Data;
 

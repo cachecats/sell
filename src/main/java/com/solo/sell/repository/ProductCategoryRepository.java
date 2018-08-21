@@ -1,6 +1,6 @@
 package com.solo.sell.repository;
 
-import com.solo.sell.dto.ProductCategory;
+import com.solo.sell.dataobject.ProductCategory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

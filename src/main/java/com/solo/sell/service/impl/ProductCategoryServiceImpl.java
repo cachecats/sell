@@ -1,6 +1,6 @@
 package com.solo.sell.service.impl;
 
-import com.solo.sell.dto.ProductCategory;
+import com.solo.sell.dataobject.ProductCategory;
 import com.solo.sell.repository.ProductCategoryRepository;
 import com.solo.sell.service.ProductCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

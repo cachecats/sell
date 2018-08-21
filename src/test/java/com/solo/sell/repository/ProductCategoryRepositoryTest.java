@@ -1,6 +1,6 @@
 package com.solo.sell.repository;
 
-import com.solo.sell.dto.ProductCategory;
+import com.solo.sell.dataobject.ProductCategory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

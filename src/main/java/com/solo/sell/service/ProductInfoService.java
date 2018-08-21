@@ -1,6 +1,6 @@
 package com.solo.sell.service;
 
-import com.solo.sell.dto.ProductInfo;
+import com.solo.sell.dataobject.ProductInfo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 

@@ -1,5 +1,6 @@
 package com.solo.sell.dto;
 
+import com.solo.sell.dataobject.OrderDetail;
 import com.solo.sell.enums.OrderStatusEnum;
 import com.solo.sell.enums.PayStatusEnum;
 import lombok.Data;
@@ -9,15 +10,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
-/**
- * 订单主表
- */
 @Entity
 @Data
 @DynamicUpdate
-public class OrderMaster {
-
+public class OrderDTO {
     /**
      * 订单id
      */
@@ -69,6 +67,8 @@ public class OrderMaster {
      */
     private Date updateTime;
 
-    public OrderMaster() {
-    }
+    /**
+     * 订单详情
+     */
+    private List<OrderDetail> orderDetailList;
 }
