@@ -12,9 +12,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
-@Entity
 @Data
-@DynamicUpdate
 public class OrderDTO {
     /**
      * 订单id

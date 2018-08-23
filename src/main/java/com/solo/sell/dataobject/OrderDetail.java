@@ -54,4 +54,9 @@ public class OrderDetail {
 
     public OrderDetail() {
     }
+
+    public OrderDetail(String productId, Integer productQuantity) {
+        this.productId = productId;
+        this.productQuantity = productQuantity;
+    }
 }

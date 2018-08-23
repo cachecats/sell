@@ -16,4 +16,5 @@ public enum PayStatusEnum {
         this.code = code;
         this.msg = msg;
     }
+
 }

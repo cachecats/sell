@@ -15,4 +15,5 @@ public enum OrderStatusEnum {
         this.code = code;
         this.msg = msg;
     }
+
 }
