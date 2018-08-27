@@ -6,6 +6,7 @@ import com.solo.sell.dto.OrderDTO;
 import com.solo.sell.enums.ResultEnum;
 import com.solo.sell.exception.SellException;
 import com.solo.sell.form.OrderForm;
+import com.solo.sell.service.BuyerService;
 import com.solo.sell.service.OrderService;
 import com.solo.sell.utils.ResultVOUtils;
 import io.swagger.annotations.Api;
@@ -32,6 +33,9 @@ public class BuyerOrderController {
 
     @Autowired
     OrderService orderService;
+
+    @Autowired
+    BuyerService buyerService;
 
     //创建订单
     @PostMapping(value = "/create")
@@ -77,8 +81,7 @@ public class BuyerOrderController {
     @ApiOperation("查看订单详情")
     public ResultVO<OrderDTO> detail(@RequestParam("openid") String openid,
                                  @RequestParam("orderId") String orderId){
-        //TODO 不安全，待优化
-        OrderDTO orderDTO = orderService.findByOrderId(orderId);
+        OrderDTO orderDTO = buyerService.findOrderOne(openid, orderId);
         return ResultVOUtils.success(orderDTO);
     }
 
@@ -87,8 +90,7 @@ public class BuyerOrderController {
     @ApiOperation("取消订单")
     public ResultVO cancel(@RequestParam("openid") String openid,
                            @RequestParam("orderId") String orderId){
-        OrderDTO orderDTO = orderService.findByOrderId(orderId);
-        OrderDTO result = orderService.cancel(orderDTO);
+        buyerService.cancelOrder(openid, orderId);
         return ResultVOUtils.success();
     }
 
