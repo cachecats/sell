@@ -6,7 +6,11 @@ spring:
     url: jdbc:mysql://127.0.0.1/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     show-sql: true
+# 如果字段值为null则不返回
+  jackson:
+    default-property-inclusion: non_null
 server:
   servlet:
     context-path: /sell
   port: 8080
+

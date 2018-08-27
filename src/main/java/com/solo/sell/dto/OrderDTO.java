@@ -1,14 +1,15 @@
 package com.solo.sell.dto;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.solo.sell.dataobject.OrderDetail;
 import com.solo.sell.enums.OrderStatusEnum;
 import com.solo.sell.enums.PayStatusEnum;
+import com.solo.sell.utils.serializer.Date2LongSerializer;
 import lombok.Data;
-import org.hibernate.annotations.DynamicUpdate;
 
-import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -58,11 +59,13 @@ public class OrderDTO {
     /**
      * 创建时间
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 
     /**

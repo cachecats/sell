@@ -14,7 +14,7 @@ import com.solo.sell.repository.OrderMasterRepository;
 import com.solo.sell.service.OrderService;
 import com.solo.sell.service.ProductInfoService;
 import com.solo.sell.utils.KeyUtils;
-import com.solo.sell.utils.convertor.OrderMaster2OrderDTO;
+import com.solo.sell.convertor.OrderMaster2OrderDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,8 +70,8 @@ public class OrderServiceImpl implements OrderService {
         //4. 将订单主表写入数据库
         OrderMaster orderMaster = new OrderMaster();
         //注意顺序，拷贝之后null值也会被拷贝，所以在拷贝之后再赋值
+        orderDTO.setOrderId(orderId);
         BeanUtils.copyProperties(orderDTO, orderMaster);
-        orderMaster.setOrderId(orderId);
         orderMaster.setOrderAmount(totalPrice);
         orderMaster.setPayStatus(PayStatusEnum.WAIT.getCode());
         orderMaster.setOrderStatus(OrderStatusEnum.NEW.getCode());

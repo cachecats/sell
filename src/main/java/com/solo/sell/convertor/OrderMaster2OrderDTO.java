@@ -1,4 +1,4 @@
-package com.solo.sell.utils.convertor;
+package com.solo.sell.convertor;
 
 import com.solo.sell.dataobject.OrderMaster;
 import com.solo.sell.dto.OrderDTO;
